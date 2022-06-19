@@ -1,24 +1,24 @@
  public class MinStack
     {
-        LinkedList<int> list;
+        ArrayList list;
         public MinStack()
         {
-             list = new LinkedList<int>();
+             list = new ArrayList();
         }
 
         public void Push(int val)
         {
-            list.AddLast(val);
+            list.Add(val);
         }
 
         public void Pop()
         {
-            list.RemoveLast();
+            list.RemoveAt(list.Count-1);
         }
 
-        public int Top() => list.Last();
+        public int Top() => (int)list[list.Count - 1];
         
 
-        public int GetMin()  => list.Min();
+        public int GetMin()  => (int)list.ToArray().Min();
         
     }

@@ -1,24 +1,38 @@
- public class MinStack
+public class MinStack
     {
-        ArrayList list;
+        Stack<int> list;
+        Stack<int> ListOfMin;
         public MinStack()
         {
-             list = new ArrayList();
+            list = new Stack<int>();
+            ListOfMin = new Stack<int>();
         }
 
         public void Push(int val)
         {
-            list.Add(val);
+            int min = 0;
+            list.Push(val);
+            if (ListOfMin.Count == 0)
+            {
+                ListOfMin.Push(val);
+            }
+            else
+            {
+                min = Math.Min(val, ListOfMin.Peek());
+                ListOfMin.Push(min);
+            }
         }
 
         public void Pop()
         {
-            list.RemoveAt(list.Count-1);
+            list.Pop();
+            ListOfMin.Pop();
+
         }
 
-        public int Top() => (int)list[list.Count - 1];
-        
+        public int Top() => list.Peek();
 
-        public int GetMin()  => (int)list.ToArray().Min();
-        
+
+        public int GetMin() => ListOfMin.Peek();
+
     }

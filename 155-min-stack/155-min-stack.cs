@@ -18,8 +18,7 @@ public class MinStack
             }
             else
             {
-                min = Math.Min(val, ListOfMin.Peek());
-                ListOfMin.Push(min);
+                ListOfMin.Push(Math.Min(val, ListOfMin.Peek()));
             }
         }
 

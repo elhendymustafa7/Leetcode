@@ -1,10 +1,12 @@
-/* Write your T-SQL query statement below */
-select id , 'Root' as Type from tree
-where p_id is  null
-union
-select id , 'Inner' as Type from tree
-where p_id is not null and id in (select distinct P_id from tree where  p_id is not null )
-union
-select id , 'Leaf' as Type from tree
-where p_id is not null and id not in (select distinct P_id from tree  where  p_id is not null)
-ORDER BY id;
+SELECT
+    id AS 'Id',
+    CASE
+        WHEN id = (SELECT id FROM tree  WHERE p_id IS NULL)
+          THEN 'Root'
+        WHEN id IN (SELECT distinct p_id FROM tree )
+          THEN 'Inner'
+        ELSE 'Leaf'
+    END AS Type
+FROM
+    tree
+ORDER BY 'Id'

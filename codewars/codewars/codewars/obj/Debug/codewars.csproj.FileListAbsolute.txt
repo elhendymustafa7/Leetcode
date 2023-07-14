@@ -1,0 +1,6 @@
+/media/mustafa/New Volume/Studing/Problem Solving/Leetcode/codewars/codewars/codewars/bin/Debug/codewars.exe
+/media/mustafa/New Volume/Studing/Problem Solving/Leetcode/codewars/codewars/codewars/bin/Debug/codewars.pdb
+/media/mustafa/New Volume/Studing/Problem Solving/Leetcode/codewars/codewars/codewars/obj/Debug/codewars.csproj.AssemblyReference.cache
+/media/mustafa/New Volume/Studing/Problem Solving/Leetcode/codewars/codewars/codewars/obj/Debug/codewars.csproj.CoreCompileInputs.cache
+/media/mustafa/New Volume/Studing/Problem Solving/Leetcode/codewars/codewars/codewars/obj/Debug/codewars.exe
+/media/mustafa/New Volume/Studing/Problem Solving/Leetcode/codewars/codewars/codewars/obj/Debug/codewars.pdb
